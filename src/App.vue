@@ -17,6 +17,9 @@
   
       <md-list>
         <md-list-item>
+          <router-link to="/login">Login</router-link>
+        </md-list-item>
+        <md-list-item>
           <router-link to="/person">Perfil</router-link>
         </md-list-item>
         <md-list-item>

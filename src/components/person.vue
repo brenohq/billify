@@ -12,7 +12,7 @@
         </md-card-header>
   
         <md-card-actions>
-          <md-button @click.native="increment">Clique Aqui!</md-button>
+          <md-button @click.native="getUserName">Clique Aqui!</md-button>
         </md-card-actions>
   
       </md-card-area>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+
   export default {
     data() {
       return {
@@ -37,6 +38,8 @@
     methods: {
       increment: function() {
         return this.id++
+      },
+      getUserName: () => {
       }
     }
   }
