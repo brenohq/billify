@@ -33,8 +33,4 @@ Vue.material.registerTheme('default', {
   warn: 'red'
 })
 
-/* eslint-disable no-new */
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+new Vue(Vue.util.extend({ router }, App)).$mount('#app')
