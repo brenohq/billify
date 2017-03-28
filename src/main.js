@@ -17,7 +17,7 @@ Vue.use(VueRouter)
 Vue.use(VueResource)
 
 const routes = [{
-  path: '/login',
+  path: '/',
   component: Login
 }, {
   path: '/person',
@@ -40,4 +40,6 @@ Vue.material.registerTheme('default', {
   warn: 'red'
 })
 
-new Vue(Vue.util.extend({ router }, App)).$mount('#app')
+new Vue(Vue.util.extend({
+  router
+}, App)).$mount('#app')

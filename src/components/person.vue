@@ -1,29 +1,28 @@
 <template lang="html">
-  <md-card>
-    <md-card-media-cover md-text-scrim>
-      <md-card-media md-ratio="16:9">
-        <img src="../assets/logo.png">
-      </md-card-media>
+  <md-tabs md-centered>
+    <md-tab md-label="Perfil" md-icon="perm_identity">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, omnis! Illum quas voluptatem, expedita iste, dicta ipsum ea veniam dolore in, quod saepe reiciendis nihil.</p>
+    </md-tab>
   
-      <md-card-area>
-        <md-card-header>
-          <div class="md-title">{{ id }}</div>
-          <div class="md-subhead">{{ name }}</div>
-        </md-card-header>
+    <md-tab md-label="Contas" md-icon="attach_money">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, omnis! Illum quas voluptatem, expedita iste, dicta ipsum ea veniam dolore in, quod saepe reiciendis nihil.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, omnis! Illum quas voluptatem, expedita iste, dicta ipsum ea veniam dolore in, quod saepe reiciendis nihil.</p>
+    </md-tab>
   
-        <md-card-actions>
-          <md-button @click.native="getUserName">Clique Aqui!</md-button>
-        </md-card-actions>
+    <md-tab md-label="Minha Casa" md-icon="home">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas.</p>
+    </md-tab>
   
-      </md-card-area>
-  
-    </md-card-media-cover>
-  </md-card>
+    <md-tab md-label="Configurações" md-icon="settings">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas.</p>
+    </md-tab>
+  </md-tabs>
 </template>
 
 <script>
-
   export default {
+    name: 'Person',
+  
     data() {
       return {
         id: 0,
@@ -39,8 +38,7 @@
       increment: function() {
         return this.id++
       },
-      getUserName: () => {
-      }
+      getUserName: () => {}
     }
   }
 </script>
