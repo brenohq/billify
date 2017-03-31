@@ -1,31 +1,36 @@
 <template lang="html">
-  <form v-on:submit.prevent="login">
-    <span class="md-display-1">Login</span></br>
-    </br>
-    <md-input-container>
-      <md-icon>mail
-        <md-tooltip>Digite seu email!</md-tooltip>
-      </md-icon>
-      <label>Email</label>
-      <md-input type="email" v-model="credentials.email" required>{{ credentials.email }}</md-input>
-    </md-input-container>
+  <md-layout md-align="center" md-gutter>
+    <md-layout md-align="center" class="flexbox-container" md-flex-xsmall="80" md-flex-small="70" md-flex-medium="55" md-flex-large="40">
   
-    <md-input-container md-has-password>
-      <md-icon>lock
-        <md-tooltip>Digite sua senha!</md-tooltip>
-      </md-icon>
-      <label>Password</label>
-      <md-input type="password" v-model="credentials.password" required>{{ credentials.password }}</md-input>
-    </md-input-container>
+      <form v-on:submit.prevent="login">
+        <span class="md-display-1">Login</span></br>
+        </br>
+        <md-input-container>
+          <md-icon>mail
+            <md-tooltip>Digite seu email!</md-tooltip>
+          </md-icon>
+          <label>Email</label>
+          <md-input type="email" v-model="credentials.email" required>{{ credentials.email }}</md-input>
+        </md-input-container>
   
-    </br>
-    <div class="md-warn">
-      <md-ink-ripple v-if="credentials.error" /> {{ error }}
-    </div>
-    </br>
+        <md-input-container md-has-password>
+          <md-icon>lock
+            <md-tooltip>Digite sua senha!</md-tooltip>
+          </md-icon>
+          <label>Password</label>
+          <md-input type="password" v-model="credentials.password" required>{{ credentials.password }}</md-input>
+        </md-input-container>
   
-    <md-button type="submit" class="md-raised md-primary">Login</md-button>
-  </form>
+        </br>
+        <div class="md-warn">
+          <md-ink-ripple v-if="credentials.error" /> {{ error }}
+        </div>
+  
+        <md-button type="submit" class="md-raised md-primary">Login</md-button>
+      </form>
+  
+    </md-layout>
+  </md-layout>
 </template>
 
 <script>
@@ -77,10 +82,18 @@
 
 <style>
   form {
-    margin-top: 150px;
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-bottom: 150px;
+    width: 100%;
     text-align: center;
+  }
+  
+  .flexbox-container {
+    height: 90vh;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
   }
 </style>
