@@ -1,6 +1,6 @@
 <template lang="html">
   <md-layout md-align="center" md-gutter>
-    <md-layout md-align="center" class="flexbox-container" md-flex-xsmall="80" md-flex-small="70" md-flex-medium="55" md-flex-large="40">
+    <md-layout md-align="center" class="flexbox-container" md-flex-xsmall="80" md-flex-small="70" md-flex-medium="55" md-flex-large="40" md-flex-xlarge="30">
   
       <form v-on:submit.prevent="login">
         <span class="md-display-1">Login</span></br>
